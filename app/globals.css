@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Canela+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Canela_Trial:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Color Variables */
+  --color-blue-100: #163C53;
+  --color-blue-40: #93c5fd;
+  --color-yellow-600: #d97706;
+  --color-bg-expertise: #DEE8EE;
+  --color-gray-10: #A6BDCB;
+}
+
+@layer base {
+  .font-playfair {
+    font-family: var(--font-playfair), serif;
+  }
+  
+  .font-dm-sans {
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  .font-canela {
+    font-family: 'Canela Text', serif;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
