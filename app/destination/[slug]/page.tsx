@@ -1,9 +1,9 @@
 import Image from 'next/image'
 
 interface DestinationPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 const destinations = {
@@ -54,8 +54,9 @@ const destinations = {
   }
 }
 
-export default function DestinationPage({ params }: DestinationPageProps) {
-  const destination = destinations[params.slug as keyof typeof destinations]
+export default async function DestinationPage({ params }: DestinationPageProps) {
+  const { slug } = await params
+  const destination = destinations[slug as keyof typeof destinations]
   
   if (!destination) {
     return (
