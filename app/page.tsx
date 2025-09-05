@@ -1,5 +1,3 @@
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
 import OurExpertise from './components/OurExpertise'
 import InstagramSection from './components/InstagramSection'
 import DestinationsSection from './components/DestinationsSection'

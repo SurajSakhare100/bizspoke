@@ -1,5 +1,3 @@
-import Navigation from '../../components/Navigation'
-import Footer from '../../components/Footer'
 import Image from 'next/image'
 
 interface DestinationPageProps {
@@ -64,7 +62,7 @@ export default function DestinationPage({ params }: DestinationPageProps) {
       <main className="min-h-screen">
         <div className="container mx-auto px-4 py-20 text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Destination Not Found</h1>
-          <p className="text-gray-600">The destination you're looking for doesn't exist.</p>
+          <p className="text-gray-600">The destination you&apos;re looking for doesn&apos;t exist.</p>
         </div>
       </main>
     )
