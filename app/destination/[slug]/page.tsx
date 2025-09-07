@@ -21,7 +21,7 @@ export default async function DestinationPage({ params }: DestinationPageProps) 
       {/* Destination Header */}
       <section className="py-20">
         <div className="mx-auto md:px-24">
-          <h1 className="text-center justify-start text-[var(--color-blue-100)] text-7xl font-medium font-['Canela_Trial'] leading-[98px]">
+          <h1 className="text-center pt-6 justify-start text-[var(--color-blue-100)] text-7xl font-medium  font-['Canela_Trial'] leading-[48px]">
             {destination.name}
           </h1>
           
@@ -42,7 +42,7 @@ export default async function DestinationPage({ params }: DestinationPageProps) 
           
           {/* Description Text */}
           <div className="mx-auto text-left">
-            <p className="text-xl text-gray-700 mb-4 leading-relaxed font-dm-sans">
+            <p className="text-xl text-gray-700 mb-4 leading-relaxed font-dm-sans font-medium">
               {destination.description}
             </p>
             <p className="text-xl text-gray-700 leading-relaxed font-dm-sans">
