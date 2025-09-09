@@ -21,7 +21,7 @@ function Team() {
       <div className="container mx-auto px-4">
         <h2 className="text-center text-Blue-100 text-5xl md:text-7xl font-medium font-['Canela_Trial'] leading-tight md:leading-[98px]">The Bizspoke Team</h2>
         <p className="max-w-3xl mx-auto mt-6 text-center text-Blue-100 text-lg md:text-xl font-normal font-['DM_Sans'] leading-relaxed">
-          Meet our team - we're the behind-the-scenes experience designers trusted by top-tier companies to run their events calendar like clockwork.
+          Meet our team - we&apos;re the behind-the-scenes experience designers trusted by top-tier companies to run their events calendar like clockwork.
         </p>
 
         <div className="mt-12 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
