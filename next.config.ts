@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ['picsum.photos', 'images.unsplash.com', 'cdn.sanity.io'],
+    domains: ['picsum.photos', 'images.unsplash.com', 'cdn.sanity.io', 'placehold.co'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -16,6 +16,10 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'cdn.sanity.io',
+      },
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
       },
     ],
   },
