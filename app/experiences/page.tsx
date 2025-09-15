@@ -11,8 +11,6 @@ export default function TravelPage() {
 
         <DestinationsGrid />
         
-      
-        
         <ReachOut />
       </div>
     </main>

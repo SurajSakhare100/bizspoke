@@ -19,7 +19,7 @@ export default function HeroSection() {
       {/* Text Block Section */}
       <section className="min-h-[100vh] flex flex-col justify-center items-center section-padding">
         <div className="container-responsive">
-          <div className="text-center text-blue-100 text-responsive-2xl font-normal font-canela-trial leading-tight md:leading-relaxed tracking-wide max-w-4xl mx-auto text-balance">
+          <div className="text-center text-blue-100 text-responsive-xl font-normal font-canela-trial leading-tight md:leading-relaxed tracking-wide max-w-4xl mx-auto text-balance">
             At Bizspoke, we deliver 360° event solutions, elevated to the highest levels of exclusivity & excellence.
           </div>
         </div>
