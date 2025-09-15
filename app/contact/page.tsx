@@ -1,9 +1,16 @@
-import React from 'react'
-
+"use client"
+import React, { useState } from 'react'
+import ThankYou from '../components/thankyou'
 function Contact() {
+    const [isSubmitted, setIsSubmitted] = useState(false)
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        setIsSubmitted(true)
+    }
     return (
         <div className="min-h-screen bg-white">
-            <div className="container-responsive section-padding">
+            {isSubmitted ? <ThankYou /> : (
+                <div className="container-responsive section-padding">
                 {/* Header Section */}
                 <div className="text-center mb-12 sm:mb-16">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium font-canela-trial text-blue-100 mb-4 sm:mb-6">
@@ -16,7 +23,7 @@ function Contact() {
 
                 {/* Contact Form */}
                 <div className="max-w-4xl mx-auto">
-                    <form className="space-y-6 sm:space-y-8">
+                    <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
                         {/* First Row */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-7">
                             <div className="space-y-2">
@@ -82,17 +89,20 @@ function Contact() {
 
                         {/* Submit Button */}
                         <div className="flex justify-center pt-6 sm:pt-8">
-                            <button 
+                            <button
+                                disabled={isSubmitted}
                                 type="submit"
                                 className="btn-primary touch-target"
                             >
-                                Submit
+                                {isSubmitted ? 'Submitted' : 'Submit'}
                             </button>
                         </div>
                     </form>
                 </div>
-            </div>
+            </div>)}
         </div>
+
+        
     )
 }
 
