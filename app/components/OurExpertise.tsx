@@ -61,7 +61,7 @@ const ExpertiseSection = ({ item, index }: { item: ExpertiseItem; index: number 
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 justify-start items-center gap-6 lg:gap-10">
             {/* Image - shows first on odd sections, last on even sections */}
             <div className={`w-full h-64 sm:h-80 lg:h-96 bg-white p-2 sm:p-4 overflow-hidden rounded-lg ${!isEven ? 'order-1 lg:order-2' : 'order-1'}`}>
-                <Link href="/travel">
+                <Link href="/experiences">
                 <Image 
                     className="w-full h-full object-cover rounded-lg" 
                     src={item.image} 
@@ -99,7 +99,7 @@ const ExpertiseSection = ({ item, index }: { item: ExpertiseItem; index: number 
                             {item.description}
                         </div>
                         <Link 
-                            href="/travel" 
+                            href="/experiences" 
                             className="inline-flex justify-start items-center gap-2 hover:gap-3 transition-all duration-300 cursor-pointer group touch-target"
                         >
                             <div className="text-yellow-600 text-lg sm:text-xl font-medium font-dm-sans leading-loose group-hover:text-yellow-500 transition-colors">

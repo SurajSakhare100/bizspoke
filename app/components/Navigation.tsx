@@ -15,10 +15,10 @@ export default function Navigation() {
         <div className="hidden md:flex w-full items-center justify-between h-16 lg:h-20">
           {/* Left Navigation Links */}
           <div className="flex items-center space-x-4 lg:space-x-6">
-            <Link href={"#experiences"} className="text-slate-600 hover:text-blue-100 px-3 py-2 text-sm lg:text-base font-medium transition-colors touch-target">
+            <Link href={"/experiences"} className="text-slate-600 hover:text-blue-100 px-3 py-2 text-sm lg:text-base font-medium transition-colors touch-target">
               Experiences
             </Link>
-            <Link href="#about" className="text-slate-600 hover:text-blue-100 px-3 py-2 text-sm lg:text-base font-medium transition-colors touch-target">
+            <Link href="/team" className="text-slate-600 hover:text-blue-100 px-3 py-2 text-sm lg:text-base font-medium transition-colors touch-target">
               About Us
             </Link>
           </div>
