@@ -24,7 +24,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} ${playfair.variable}`}>
         <Navigation />
-        {children}
+        <div className="pt-16 md:pt-20">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>

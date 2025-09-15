@@ -17,27 +17,33 @@ const TEAM_MEMBERS: TeamMember[] = [
 
 function Team() {
   return (
-    <section className="bg-white py-20">
-      <div className="container mx-auto px-4">
-        <h2 className="text-center text-Blue-100 text-5xl md:text-7xl font-medium font-['Canela_Trial'] leading-tight md:leading-[98px]">The Bizspoke Team</h2>
-        <p className="max-w-3xl mx-auto mt-6 text-center text-Blue-100 text-lg md:text-xl font-normal font-['DM_Sans'] leading-relaxed">
-          Meet our team - we&apos;re the behind-the-scenes experience designers trusted by top-tier companies to run their events calendar like clockwork.
-        </p>
+    <section className="bg-white section-padding">
+      <div className="container-responsive">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-blue-100 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium font-canela-trial leading-tight text-balance">
+            The Bizspoke Team
+          </h2>
+          <p className="max-w-4xl mx-auto mt-4 sm:mt-6 text-center text-blue-100 text-base sm:text-lg md:text-xl font-normal font-dm-sans leading-relaxed text-balance">
+            Meet our team - we&apos;re the behind-the-scenes experience designers trusted by top-tier companies to run their events calendar like clockwork.
+          </p>
+        </div>
 
-        <div className="mt-12 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <div className="flex gap-5 snap-x snap-mandatory">
+        <div className="overflow-x-auto scrollbar-hide">
+          <div className="flex gap-4 sm:gap-5 snap-x snap-mandatory pb-4">
             {TEAM_MEMBERS.map((member, idx) => (
-              <div key={`${member.name}-${idx}`} className="min-w-[260px] sm:min-w-[280px] px-5 pt-5 pb-7 bg-[#DDE7ED] rounded-xl flex flex-col items-center snap-start">
-                <div className="w-64 h-64 relative overflow-hidden">
+              <div key={`${member.name}-${idx}`} className="min-w-[240px] sm:min-w-[260px] md:min-w-[280px] px-4 sm:px-5 pt-4 sm:pt-5 pb-6 sm:pb-7 bg-gray-40 rounded-xl flex flex-col items-center snap-start hover:shadow-lg transition-shadow duration-300">
+                <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 relative overflow-hidden rounded-lg">
                   <Image
                     src={member.imageUrl}
                     alt={member.name}
                     fill
-                    className="object-cover object-center grayscale"
-                    sizes="256px"
+                    className="object-cover object-center grayscale hover:grayscale-0 transition-all duration-300"
+                    sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, 256px"
                   />
                 </div>
-                <div className="mt-4 text-black text-xl font-bold font-['DM_Sans'] uppercase tracking-wide">{member.name}</div>
+                <div className="mt-3 sm:mt-4 text-blue-100 text-lg sm:text-xl font-bold font-dm-sans uppercase tracking-wide text-center">
+                  {member.name}
+                </div>
               </div>
             ))}
           </div>

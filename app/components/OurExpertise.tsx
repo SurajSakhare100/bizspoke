@@ -2,6 +2,7 @@
 
 import { ArrowBigUp } from 'lucide-react'
 import Image, { StaticImageData } from 'next/image'
+import Link from 'next/link'
 import ExpertiseImage1 from '@/public/images/ex1.png'
 import ExpertiseImage2 from '@/public/images/ex2.png'
 import ExpertiseImage3 from '@/public/images/ex3.png'
@@ -57,39 +58,56 @@ const ExpertiseSection = ({ item, index }: { item: ExpertiseItem; index: number 
     const number = (index + 1).toString().padStart(2, '0');
     
     return (
-        <div className="w-full grid grid-cols-2
-         justify-start items-center gap-8 lg:gap-10">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 justify-start items-center gap-6 lg:gap-10">
             {/* Image - shows first on odd sections, last on even sections */}
-            <div className={`w-full lg:w-[621px] h-64 md:h-80 lg:h-96 bg-white p-4 overflow-hidden ${!isEven ? 'order-1 lg:order-3' : ''}`}>
-                <Image className="w-full h-full object-cover" src={item.image} alt={item.imageAlt} width={598} height={384} />
+            <div className={`w-full h-64 sm:h-80 lg:h-96 bg-white p-2 sm:p-4 overflow-hidden rounded-lg ${!isEven ? 'order-1 lg:order-2' : 'order-1'}`}>
+                <Link href="/travel">
+                <Image 
+                    className="w-full h-full object-cover rounded-lg" 
+                    src={item.image} 
+                    alt={item.imageAlt} 
+                    width={598} 
+                    height={384}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
+                /></Link>
             </div>
             
             {/* Number and Content Container */}
-                <div className={`w-full lg:w-[480px] flex flex-col justify-start items-start gap-8 lg:gap-16 ${!isEven ? 'order-2 lg:order-2' : ''}`}>
+            <div className={`w-full flex flex-col justify-start items-start gap-6 lg:gap-8 ${!isEven ? 'order-2 lg:order-1' : 'order-2'}`}>
                 {/* Number with yellow line - positioned at the top */}
-                <div className="relative w-full flex items-center gap-4">
+                <div className="relative w-full flex flex-col sm:flex-row items-start sm:items-center gap-4">
                     <div className="relative">
-                    <div className="opacity-40 text-[var(--color-gray-10)] text-xl md:text-2xl lg:text-[160px] font-bold font-dm-sans leading-none">{number}</div>
-                    <div className="w-16 lg:w-20 h-0 outline outline-2 outline-offset-[-1px] outline-[var(--color-yellow-600)] absolute top-1/2 right-2 translate-y-1/2"></div>
+                        <div className="opacity-40 text-gray-10 text-4xl sm:text-6xl md:text-8xl lg:text-[120px] xl:text-[160px] font-bold font-dm-sans leading-none">
+                            {number}
+                        </div>
+                        <div className="w-12 sm:w-16 lg:w-20 h-0 outline outline-2 outline-offset-[-1px] outline-yellow-600 absolute top-1/2 right-1 sm:right-2 translate-y-1/2"></div>
                     </div>
-                    
-                    
-                    <div className="text-[var(--color-yellow-600)] text-base font-normal font-dm-sans uppercase leading-snug tracking-[2.56px]">{item.category}</div>
+                    <div className="text-yellow-600 text-sm sm:text-base font-normal font-dm-sans uppercase leading-snug tracking-wider">
+                        {item.category}
+                    </div>
                 </div>
                 
                 {/* Content */}
-                <div className="w-full flex flex-col justify-start items-start gap-7">
-                    <div className="w-full flex flex-col justify-start items-start gap-2.5 md:pl-20">
-                        <div className="w-full inline-flex justify-start items-center gap-1.5">
-                            <div className="text-[var(--color-blue-100)] text-3xl md:text-4xl font-medium font-canela leading-tight">{item.title}</div>
+                <div className="w-full flex flex-col justify-start items-start gap-4 sm:gap-6">
+                    <div className="w-full flex flex-col justify-start items-start gap-3 sm:gap-4">
+                        <div className="w-full">
+                            <div className="text-blue-100 text-2xl sm:text-3xl lg:text-4xl font-medium font-canela leading-tight">
+                                {item.title}
+                            </div>
                         </div>
-                        <div className="w-full text-[var(--color-blue-100)] text-lg md:text-xl  font-normal font-dm-sans leading-loose">{item.description}</div>
-                        <div className="inline-flex justify-start items-center gap-1.5">
-                        <div className="text-[var(--color-yellow-600)] text-xl md:text-2xl font-medium font-dm-sans leading-loose">Know more</div>
-                        <ArrowBigUp strokeWidth={2} className='w-5 h-5 md:w-6 md:h-6 rotate-45 text-[var(--color-yellow-600)]' />
+                        <div className="w-full text-blue-100 text-base sm:text-lg lg:text-xl font-normal font-dm-sans leading-relaxed">
+                            {item.description}
+                        </div>
+                        <Link 
+                            href="/travel" 
+                            className="inline-flex justify-start items-center gap-2 hover:gap-3 transition-all duration-300 cursor-pointer group touch-target"
+                        >
+                            <div className="text-yellow-600 text-lg sm:text-xl font-medium font-dm-sans leading-loose group-hover:text-yellow-500 transition-colors">
+                                Know more
+                            </div>
+                            <ArrowBigUp strokeWidth={2} className='w-5 h-5 sm:w-6 sm:h-6 rotate-45 text-yellow-600 group-hover:text-yellow-500 transition-colors' />
+                        </Link>
                     </div>
-                    </div>
-                    
                 </div>
             </div>
         </div>
@@ -98,15 +116,19 @@ const ExpertiseSection = ({ item, index }: { item: ExpertiseItem; index: number 
 
 export default function OurExpertise() {
     return (
-        <section className="w-full px-6 md:px-12 lg:px-24 py-16 md:py-20 lg:py-28 bg-[var(--color-bg-expertise)] flex justify-center font-medium font-dm-sans items-center overflow-hidden">
-            <div className="w-full max-w-7xl flex flex-col justify-start items-center gap-16 md:gap-20 lg:gap-24">
-                <div className="flex flex-col justify-center items-center">
-                    <div className="text-center text-[var(--color-blue-100)] text-4xl font-medium font-dm-sans uppercase leading-[50.40px] tracking-[7.20px]">our expertise</div>
-                </div>
-                <div className="w-full flex flex-col justify-start items-start gap-16 md:gap-20 lg:gap-28">
-                    {expertiseData.map((item, index) => (
-                        <ExpertiseSection key={item.id} item={item} index={index} />
-                    ))}
+        <section className="w-full section-padding bg-bg-expertise flex justify-center font-medium font-dm-sans items-center overflow-hidden">
+            <div className="container-responsive">
+                <div className="w-full flex flex-col justify-start items-center gap-12 sm:gap-16 lg:gap-20">
+                    <div className="flex flex-col justify-center items-center">
+                        <div className="text-center text-blue-100 text-2xl sm:text-3xl md:text-4xl font-medium font-dm-sans uppercase leading-tight tracking-widest">
+                            our expertise
+                        </div>
+                    </div>
+                    <div className="w-full flex flex-col justify-start items-start gap-12 sm:gap-16 lg:gap-20">
+                        {expertiseData.map((item, index) => (
+                            <ExpertiseSection key={item.id} item={item} index={index} />
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

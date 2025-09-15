@@ -1,20 +1,30 @@
 import React from 'react'
+import Link from 'next/link'
 
 function ReachOut() {
-return(
-<section className="flex flex-col justify-center items-center gap-16 py-20">
-    
-<div className="flex flex-col justify-center items-center gap-16">
-    <div className="self-stretch flex flex-col justify-center items-center gap-2.5">
-        <div className="self-stretch text-center justify-start text-[var(--color-blue-100)] text-6xl font-medium font-['Canela_Trial'] leading-[84px]">Reach out to us!</div>
-        <div className="w-[562px] text-center justify-start text-[var(--color-blue-100)] text-3xl font-normal font-['DM_Sans'] leading-10">Let&apos;s Start Planning!<br/>We&apos;re excited to help bring your next great experience to life.</div>
-    </div>
-    <div className="px-16 py-5 bg-slate-200 rounded-[47.14px] outline outline-[1.57px] outline-offset-[-1.57px] outline-teal-900 inline-flex justify-center items-center gap-2.5 overflow-hidden">
-        <div className="text-right justify-start text-teal-900 text-xl font-medium font-['Inter'] leading-7">Contact us</div>
-    </div>
-</div>
-</section>
-)}
-
+  return (
+    <section className="section-padding">
+      <div className="container-responsive">
+        <div className="flex flex-col justify-center items-center gap-8 sm:gap-12 lg:gap-16">
+          <div className="flex flex-col justify-center items-center gap-4 sm:gap-6 text-center">
+            <h2 className="text-blue-100 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium font-canela-trial leading-tight text-balance">
+              Reach out to us!
+            </h2>
+            <p className="text-blue-100 text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal font-dm-sans leading-relaxed max-w-3xl text-balance">
+              Let&apos;s Start Planning!<br className="hidden sm:block"/>
+              We&apos;re excited to help bring your next great experience to life.
+            </p>
+          </div>
+          <Link 
+            href="/contact" 
+            className="btn-secondary touch-target"
+          >
+            Contact us
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+}
 
 export default ReachOut
