@@ -32,9 +32,6 @@ export default function Navigation() {
               height={28}
               className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8"
             />
-            <h1 className="text-blue-100 text-2xl sm:text-3xl lg:text-4xl font-bold font-canela leading-tight">
-              Bizspoke
-            </h1>
           </Link>
 
           {/* Right Navigation Links */}
@@ -59,7 +56,6 @@ export default function Navigation() {
               height={24}
               className="w-6 h-6"
             />
-            <h1 className="text-blue-100 text-xl font-bold font-canela">Bizspoke</h1>
           </Link>
 
           {/* Mobile menu button */}

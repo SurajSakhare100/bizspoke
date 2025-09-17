@@ -35,7 +35,7 @@ export default function Footer() {
         {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-8 sm:mb-12">
           {/* Navigation Links */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 border border-r pr-2">
             <a href="#experiences" className="block text-blue-100 text-base sm:text-lg font-medium font-dm-sans uppercase tracking-wide hover:opacity-80 transition-opacity touch-target">
               Experiences
             </a>
@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
           
           {/* Company Info */}
-          <div className="space-y-3">
+          <div className="space-y-3  border border-r pr-2">
             <h4 className="text-blue-100 text-base sm:text-lg font-semibold font-dm-sans uppercase tracking-wide">
               Bizspoke Private Limited
             </h4>
@@ -104,4 +104,3 @@ export default function Footer() {
     </footer>
   )
 }
-

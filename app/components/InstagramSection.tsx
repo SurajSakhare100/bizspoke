@@ -11,8 +11,8 @@ export default function InstagramSection() {
   ]
 
   return (
-    <section className="section-padding">
-      <div className="container-responsive">
+    <section className="">
+      <div className="py-20">
         <h1 className="text-center text-blue-100 text-2xl sm:text-3xl md:text-4xl font-medium font-dm-sans uppercase leading-tight tracking-widest mb-8 sm:mb-10">
           visit our instagram
         </h1>

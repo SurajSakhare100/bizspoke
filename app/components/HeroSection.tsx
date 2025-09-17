@@ -9,21 +9,14 @@ export default function HeroSection() {
           src={HeroImage}
           alt="London skyline with Big Ben and Houses of Parliament at sunrise"
           fill
-          className="object-cover"
+          className="object-cover object-left sm:object-center"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/20"></div>
+        <h1 className="text-[#163C53] text-6xl sm:text-7xl md:text-8xl lg:text-8xl font-bold absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 font-canela-trial">Bizspoke</h1>
       </section>
 
-      {/* Text Block Section */}
-      <section className="min-h-[100vh] flex flex-col justify-center items-center section-padding">
-        <div className="container-responsive">
-          <div className="text-center text-blue-100 text-responsive-xl font-normal font-canela-trial leading-tight md:leading-relaxed tracking-wide max-w-4xl mx-auto text-balance">
-            At Bizspoke, we deliver 360° event solutions, elevated to the highest levels of exclusivity & excellence.
-          </div>
-        </div>
-      </section>
+      
     </>
   )
 }
