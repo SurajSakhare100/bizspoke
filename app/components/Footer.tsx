@@ -1,4 +1,4 @@
-import { InstagramIcon, LinkedinIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { Copyright, InstagramIcon, LinkedinIcon, MailIcon, PhoneIcon } from "lucide-react";
 import FooterLogo from '@/public/images/logo.png'
 import Image from 'next/image'
 
@@ -7,8 +7,8 @@ export default function Footer() {
     <footer className="bg-slate-200 section-padding">
       <div className="container-responsive">
         {/* Header Section */}
-        <div className="flex flex-col lg:flex-row justify-between items-center mb-12 sm:mb-16">
-          <div className="flex items-center gap-3 mb-6 lg:mb-0">
+        <div className="flex flex-row flex-row justify-between  items-center mb-12 sm:mb-16">
+          <div className="flex items-center gap-3 ">
             <Image
               width={32}
               height={32}
@@ -16,18 +16,15 @@ export default function Footer() {
               alt="Bizspoke Logo"
               className="w-8 h-8 sm:w-10 sm:h-10"
             />
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-medium font-canela text-blue-100">
-              Bizspoke
-            </h3>
           </div>
           
           {/* Social Media Icons */}
           <div className="flex items-center gap-4 sm:gap-6">
             <a href="#" className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center hover:bg-blue-100 hover:text-white transition-all duration-300 touch-target">
-              <InstagramIcon className="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 hover:text-white" />
+              <InstagramIcon className="w-5 h-5 sm:w-6 sm:h-6 text-slate-400 hover:text-white" />
             </a>
             <a href="#" className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center hover:bg-blue-100 hover:text-white transition-all duration-300 touch-target">
-              <LinkedinIcon className="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 hover:text-white" />
+              <LinkedinIcon className="w-5 h-5 sm:w-6 sm:h-6 text-slate-400 hover:text-white" />
             </a>
           </div>
         </div>
@@ -35,23 +32,23 @@ export default function Footer() {
         {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-8 sm:mb-12">
           {/* Navigation Links */}
-          <div className="grid grid-cols-2 gap-4 border border-r pr-2">
-            <a href="#experiences" className="block text-blue-100 text-base sm:text-lg font-medium font-dm-sans uppercase tracking-wide hover:opacity-80 transition-opacity touch-target">
+          <div className="grid grid-cols-2 gap-4 border-none border-slate-300 border-b-1 md:border-b-0 md:border-r pr-2 mb-4 md:mb-0">
+            <a href="/experiences" className="block text-blue-100 text-base sm:text-lg font-medium font-dm-sans uppercase tracking-wide hover:opacity-80 transition-opacity touch-target">
               Experiences
             </a>
-            <a href="#about" className="block text-blue-100 text-base sm:text-lg font-medium font-dm-sans uppercase tracking-wide hover:opacity-80 transition-opacity touch-target">
+            <a href="/#about-us" className="block text-blue-100 text-base sm:text-lg font-medium font-dm-sans uppercase tracking-wide hover:opacity-80 transition-opacity touch-target">
               About us
             </a>
-            <a href="#clients" className="block text-blue-100 text-base sm:text-lg font-medium font-dm-sans uppercase tracking-wide hover:opacity-80 transition-opacity touch-target">
-              Clients
+            <a href="/team" className="block text-blue-100 text-base sm:text-lg font-medium font-dm-sans uppercase tracking-wide hover:opacity-80 transition-opacity touch-target">
+              Team
             </a>
-            <a href="#services" className="block text-blue-100 text-base sm:text-lg font-medium font-dm-sans uppercase tracking-wide hover:opacity-80 transition-opacity touch-target">
+            <a href="/#services" className="block text-blue-100 text-base sm:text-lg font-medium font-dm-sans uppercase tracking-wide hover:opacity-80 transition-opacity touch-target">
               Services
             </a>
           </div>
           
           {/* Company Info */}
-          <div className="space-y-3  border border-r pr-2">
+          <div className="space-y-3  border-none border-slate-300 border-b-1 md:border-b-0 md:border-r pr-2 mb-4 md:mb-0">
             <h4 className="text-blue-100 text-base sm:text-lg font-semibold font-dm-sans uppercase tracking-wide">
               Bizspoke Private Limited
             </h4>
@@ -88,10 +85,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-4 h-4 relative">
-              <div className="w-3 h-3 absolute top-0.5 left-0.5 border border-slate-400"></div>
-              <div className="w-1 h-1.5 absolute top-1.5 left-1.5 border border-slate-400"></div>
-            </div>
+            <Copyright className="w-4 h-4 text-slate-400"/>
             <span className="text-slate-400 text-sm sm:text-base font-normal font-dm-sans">
               All rights reserved by Bizspoke<span className="font-medium">.</span>
             </span>

@@ -58,12 +58,12 @@ const ExpertiseSection = ({ item, index }: { item: ExpertiseItem; index: number 
     const number = (index + 1).toString().padStart(2, '0');
     
     return (
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 justify-start items-center gap-6 lg:gap-10">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 justify-start items-center gap-6 lg:gap-10" id="services">
             {/* Image - shows first on odd sections, last on even sections */}
-            <div className={`w-full h-64 sm:h-80 lg:h-96 bg-white p-2 sm:p-4 overflow-hidden rounded-lg ${!isEven ? 'order-1 lg:order-2' : 'order-1'}`}>
+            <div className={`w-full h-64 sm:h-80 lg:h-96 bg-white p-2 sm:p-4 overflow-hidden rounded-sm ${!isEven ? 'order-1 lg:order-2' : 'order-1'}`}>
                 <Link href="/experiences">
                 <Image 
-                    className="w-full h-full object-cover rounded-lg" 
+                    className="w-full h-full object-cover" 
                     src={item.image} 
                     alt={item.imageAlt} 
                     width={598} 
@@ -75,12 +75,12 @@ const ExpertiseSection = ({ item, index }: { item: ExpertiseItem; index: number 
             {/* Number and Content Container */}
             <div className={`w-full flex flex-col justify-start items-start gap-6 lg:gap-8 ${!isEven ? 'order-2 lg:order-1' : 'order-2'}`}>
                 {/* Number with yellow line - positioned at the top */}
-                <div className="relative w-full flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <div className="relative w-full flex flex-row items-center sm:items-start sm:items-center gap-4">
                     <div className="relative">
-                        <div className="opacity-40 text-gray-10 text-4xl sm:text-6xl md:text-8xl lg:text-[120px] xl:text-[160px] font-bold font-dm-sans leading-none">
+                        <div className="opacity-40 text-[#A6BDCB] text-6xl md:text-8xl lg:text-[100px] xl:text-[160px] font-bold font-dm-sans leading-none">
                             {number}
                         </div>
-                        <div className="w-12 sm:w-16 lg:w-20 h-0 outline outline-2 outline-offset-[-1px] outline-yellow-600 absolute top-1/2 right-1 sm:right-2 translate-y-1/2"></div>
+                        <div className="w-8 sm:w-16 lg:w-16 h-0 outline outline-1 outline-offset-[-1px] outline-[#B78311] absolute top-1/2 right-1 sm:right-2 translate-y-1/2"></div>
                     </div>
                     <div className="text-yellow-600 text-sm sm:text-base font-normal font-dm-sans uppercase leading-snug tracking-wider">
                         {item.category}

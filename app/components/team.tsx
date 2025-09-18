@@ -17,8 +17,8 @@ const TEAM_MEMBERS: TeamMember[] = [
 
 function Team() {
   return (
-    <section className="bg-white section-padding">
-      <div className="container-responsive">
+    <section className="">
+      <div className="pt-16 pb-16">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-blue-100 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium font-canela-trial leading-tight text-balance">
             The Bizspoke Team
@@ -29,15 +29,15 @@ function Team() {
         </div>
 
         <div className="overflow-x-auto scrollbar-hide">
-          <div className="flex gap-4 sm:gap-5 snap-x snap-mandatory pb-4">
+          <div className="flex gap-3 sm:gap-4 snap-x snap-mandatory pb-4">
             {TEAM_MEMBERS.map((member, idx) => (
-              <div key={`${member.name}-${idx}`} className="min-w-[240px] sm:min-w-[260px] md:min-w-[280px] px-4 sm:px-5 pt-4 sm:pt-5 pb-6 sm:pb-7 bg-gray-40 rounded-xl flex flex-col items-center snap-start hover:shadow-lg transition-shadow duration-300">
-                <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 relative overflow-hidden rounded-lg">
+              <div key={`${member.name}-${idx}`} className="w-full px-4 sm:px-5 pt-4 sm:pt-5 pb-6 sm:pb-7 bg-[#DDE7ED]  flex flex-col items-center snap-start hover:shadow-lg transition-shadow duration-300">
+                <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 relative overflow-hidden ">
                   <Image
                     src={member.imageUrl}
                     alt={member.name}
                     fill
-                    className="object-cover object-center grayscale hover:grayscale-0 transition-all duration-300"
+                    className="object-cover object-center grayscale transition-all duration-300"
                     sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, 256px"
                   />
                 </div>

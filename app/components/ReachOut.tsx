@@ -17,7 +17,7 @@ function ReachOut() {
           </div>
           <Link 
             href="/contact" 
-            className="btn-secondary touch-target"
+            className="flex items-center justify-center px-6 py-3 sm:px-12 sm:py-4 border-2 border-blue-100 text-blue-100 font-medium rounded-full hover:bg-blue-100 hover:text-white transition-all duration-300  bg-[#DEE8EE]"
           >
             Contact us
           </Link>
