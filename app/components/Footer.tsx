@@ -1,6 +1,7 @@
 import { Copyright, InstagramIcon, LinkedinIcon, MailIcon, PhoneIcon } from "lucide-react";
 import FooterLogo from '@/public/images/logo.png'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -33,18 +34,18 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-8 sm:mb-12">
           {/* Navigation Links */}
           <div className="grid grid-cols-2 gap-4 border-none border-slate-300 border-b-1 md:border-b-0 md:border-r pr-2 mb-4 md:mb-0">
-            <a href="/experiences" className="block text-blue-100 text-base sm:text-lg font-medium font-dm-sans uppercase tracking-wide hover:opacity-80 transition-opacity touch-target">
+            <Link href="/experiences" className="block text-blue-100 text-base sm:text-lg font-medium font-dm-sans uppercase tracking-wide hover:opacity-80 transition-opacity touch-target">
               Experiences
-            </a>
-            <a href="/#about-us" className="block text-blue-100 text-base sm:text-lg font-medium font-dm-sans uppercase tracking-wide hover:opacity-80 transition-opacity touch-target">
+            </Link>
+            <Link href="/#about-us" className="block text-blue-100 text-base sm:text-lg font-medium font-dm-sans uppercase tracking-wide hover:opacity-80 transition-opacity touch-target">
               About us
-            </a>
-            <a href="/team" className="block text-blue-100 text-base sm:text-lg font-medium font-dm-sans uppercase tracking-wide hover:opacity-80 transition-opacity touch-target">
+            </Link>
+            <Link href="/team" className="block text-blue-100 text-base sm:text-lg font-medium font-dm-sans uppercase tracking-wide hover:opacity-80 transition-opacity touch-target">
               Team
-            </a>
-            <a href="/#services" className="block text-blue-100 text-base sm:text-lg font-medium font-dm-sans uppercase tracking-wide hover:opacity-80 transition-opacity touch-target">
+            </Link>
+            <Link href="/#services" className="block text-blue-100 text-base sm:text-lg font-medium font-dm-sans uppercase tracking-wide hover:opacity-80 transition-opacity touch-target">
               Services
-            </a>
+            </Link>
           </div>
           
           {/* Company Info */}
