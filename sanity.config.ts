@@ -31,7 +31,7 @@ export default defineConfig({
     images: {
       // Configure image upload options - allow all image types
       accept: 'image/*',
-      maximumUploadSize: 30000000, // 30MB limit
+      maximumUploadSize: 100000000, // 100MB limit
     },
   },
   // Additional configuration for file uploads

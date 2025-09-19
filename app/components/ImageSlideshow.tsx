@@ -6,9 +6,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 interface ImageSlideshowProps {
   images: {
-    asset: {
-      url: string;
-    };
+    asset?: {
+      url?: string;
+    } | null;
     alt?: string;
   }[];
   imageName: string;
@@ -20,15 +20,18 @@ export default function ImageSlideshow({
   imageName, 
   autoPlayInterval = 1000 
 }: ImageSlideshowProps) {
+  // Filter out images with invalid assets
+  const validImages = images.filter(img => img.asset?.url);
+  
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(-1); // -1 = backward (reverse)
 
   useEffect(() => {
-    if (images.length <= 1) return;
+    if (validImages.length <= 1) return;
 
     const timer = setInterval(() => {
       setCurrentIndex((prev) => {
-        if (direction === 1 && prev === images.length - 1) {
+        if (direction === 1 && prev === validImages.length - 1) {
           setDirection(-1);
           return prev - 1;
         }
@@ -41,9 +44,18 @@ export default function ImageSlideshow({
     }, autoPlayInterval);
 
     return () => clearInterval(timer);
-  }, [direction, images.length, autoPlayInterval]);
+  }, [direction, validImages.length, autoPlayInterval]);
 
-  if (images.length === 0) return null;
+  if (validImages.length === 0) {
+    return (
+      <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] overflow-hidden rounded-lg shadow-xl bg-gray-200 flex items-center justify-center">
+        <div className="text-center text-gray-500">
+          <div className="text-2xl mb-2">📸</div>
+          <p className="text-sm">No images available</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="relative w-full">
@@ -62,8 +74,8 @@ export default function ImageSlideshow({
             }}
           >
             <Image
-              src={images[currentIndex].asset.url}
-              alt={images[currentIndex].alt || `${imageName} - Image ${currentIndex + 1}`}
+              src={validImages[currentIndex].asset!.url!}
+              alt={validImages[currentIndex].alt || `${imageName} - Image ${currentIndex + 1}`}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
@@ -74,9 +86,9 @@ export default function ImageSlideshow({
       </div>
 
       {/* Simple Progress Indicators - Non-interactive */}
-      {images.length > 1 && (
+      {validImages.length > 1 && (
         <div className="flex justify-center mt-6 gap-2">
-          {images.map((_, index) => (
+          {validImages.map((_, index) => (
             <div
               key={index}
               className={`w-2 h-2 rounded-full transition-all duration-500 ${

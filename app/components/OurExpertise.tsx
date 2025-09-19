@@ -15,6 +15,7 @@ interface ExpertiseItem {
     description: string
     image: StaticImageData
     imageAlt: string
+    baseurl: string
 }
 
 const expertiseData: ExpertiseItem[] = [
@@ -24,7 +25,8 @@ const expertiseData: ExpertiseItem[] = [
         title: "Luxury Retreats",
         description: "Curated getaways that blend relaxation with inspiration — from mindfulness escapes to leadership retreats.",
         image: ExpertiseImage1,
-        imageAlt: "Luxury overwater bungalow resort"
+        imageAlt: "Luxury overwater bungalow resort",
+        baseurl: "/experiences/retreats"
     },
     {
         id: 2,
@@ -32,7 +34,8 @@ const expertiseData: ExpertiseItem[] = [
         title: "Events and Off-sites",
         description: "Curated getaways that blend relaxation with inspiration — from mindfulness escapes to leadership retreats.",
         image: ExpertiseImage2,
-        imageAlt: "Indoor event with champagne toast"
+        imageAlt: "Indoor event with champagne toast",
+        baseurl: "/experiences/events"
     },
     {
         id: 3,
@@ -40,7 +43,8 @@ const expertiseData: ExpertiseItem[] = [
         title: "Mice",
         description: "Curated getaways that blend relaxation with inspiration — from mindfulness escapes to leadership retreats.",
         image: ExpertiseImage3,
-        imageAlt: "Luxurious yacht in marina"
+        imageAlt: "Luxurious yacht in marina",
+        baseurl: "/experiences/mice"
     },
     {
         id: 4,
@@ -48,7 +52,8 @@ const expertiseData: ExpertiseItem[] = [
         title: "Celebrations",
         description: "Curated getaways that blend relaxation with inspiration — from mindfulness escapes to leadership retreats.",
         image: ExpertiseImage4,
-        imageAlt: "Elegant outdoor dining celebration"
+        imageAlt: "Elegant outdoor dining celebration",
+        baseurl: "/experiences/celebrations"
     }
 ]
 
@@ -61,7 +66,7 @@ const ExpertiseSection = ({ item, index }: { item: ExpertiseItem; index: number 
         <div className="w-full grid grid-cols-1 lg:grid-cols-2 justify-start items-center gap-6 lg:gap-10" id="services">
             {/* Image - shows first on odd sections, last on even sections */}
             <div className={`w-full h-64 sm:h-80 lg:h-96 bg-white p-2 sm:p-4 overflow-hidden rounded-sm ${!isEven ? 'order-1 lg:order-2' : 'order-1'}`}>
-                <Link href="/experiences">
+                <Link href={item.baseurl}>
                 <Image 
                     className="w-full h-full object-cover" 
                     src={item.image} 
@@ -99,7 +104,7 @@ const ExpertiseSection = ({ item, index }: { item: ExpertiseItem; index: number 
                             {item.description}
                         </div>
                         <Link 
-                            href="/experiences" 
+                            href={item.baseurl} 
                             className="inline-flex justify-start items-center gap-2 hover:gap-3 transition-all duration-300 cursor-pointer group touch-target"
                         >
                             <div className="text-yellow-600 text-lg sm:text-xl font-medium font-dm-sans leading-loose group-hover:text-yellow-500 transition-colors">

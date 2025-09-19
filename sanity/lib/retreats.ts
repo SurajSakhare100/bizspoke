@@ -35,6 +35,8 @@ export interface RetreatsForGrid {
     current: string
   }
   image: RetreatsImage
+  description: string
+  subDescription: string
 }
 
 // Get all luxury retreats
