@@ -1,12 +1,11 @@
-import DestinationsGrid from '../components/DestinationsGrid'
+import ExperiencesGrid from '../components/ExperiencesGrid'
 import ReachOut from '../components/ReachOut'
 
-export default function TravelPage() {
+export default function ExperiencesPage() {
   return (
     <main className="page-container">
       <div className="content-wrapper">
-
-        <DestinationsGrid />
+        <ExperiencesGrid />
         <ReachOut />
       </div>
     </main>

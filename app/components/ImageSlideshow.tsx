@@ -11,14 +11,14 @@ interface ImageSlideshowProps {
     };
     alt?: string;
   }[];
-  destinationName: string;
+  imageName: string;
   autoPlayInterval?: number;
 }
 
 export default function ImageSlideshow({ 
   images, 
-  destinationName, 
-  autoPlayInterval = 2000 
+  imageName, 
+  autoPlayInterval = 1000 
 }: ImageSlideshowProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(-1); // -1 = backward (reverse)
@@ -63,7 +63,7 @@ export default function ImageSlideshow({
           >
             <Image
               src={images[currentIndex].asset.url}
-              alt={images[currentIndex].alt || `${destinationName} - Image ${currentIndex + 1}`}
+              alt={images[currentIndex].alt || `${imageName} - Image ${currentIndex + 1}`}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"

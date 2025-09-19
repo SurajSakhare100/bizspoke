@@ -1,13 +1,13 @@
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
-  name: 'destination',
-  title: 'Destination',
+  name: 'eventsOffsites',
+  title: 'Events and Off-sites',
   type: 'document',
   fields: [
     defineField({
       name: 'name',
-      title: 'Destination Name',
+      title: 'Event Name',
       type: 'string',
       validation: (Rule) => Rule.required().max(100),
     }),
@@ -30,10 +30,6 @@ export default defineType({
           type: 'image',
           options: {
             hotspot: true,
-            // Accept all image formats
-            accept: 'image/*',
-            // Additional formats support
-            storeOriginalFilename: true,
           },
         },
       ],
@@ -43,21 +39,26 @@ export default defineType({
       name: 'description',
       title: 'Main Description',
       type: 'text',
-      rows: 3,
       validation: (Rule) => Rule.required().max(500),
     }),
     defineField({
       name: 'subDescription',
       title: 'Sub Description',
       type: 'text',
-      rows: 3,
       validation: (Rule) => Rule.required().max(500),
     }),
     defineField({
+      name: 'category',
+      title: 'Category',
+      type: 'string',
+      initialValue: 'CURATED GETAWAYS',
+      readOnly: true,
+    }),
+    defineField({
       name: 'featured',
-      title: 'Featured Destination',
+      title: 'Featured Event',
       type: 'boolean',
-      description: 'Mark this destination as featured to highlight it on the homepage',
+      description: 'Mark this event as featured to highlight it on the homepage',
       initialValue: false,
     }),
     defineField({

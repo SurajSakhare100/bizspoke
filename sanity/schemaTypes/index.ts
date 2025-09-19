@@ -1,8 +1,14 @@
 import { type SchemaTypeDefinition } from 'sanity'
-import destination from './destination'
+import luxuryRetreats from './luxuryRetreats'
+import eventsOffsites from './eventsOffsites'
+import mice from './mice'
+import celebrations from './celebrations'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
-    destination,
+    luxuryRetreats,
+    eventsOffsites,
+    mice,
+    celebrations,
   ],
 }

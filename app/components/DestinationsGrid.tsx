@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { getDestinationsForGrid } from '@/sanity/lib/destinations'
+import { getDestinationsForGrid } from '@/sanity/lib/retreats'
 
 export default async function DestinationsGrid() {
   const destinations = await getDestinationsForGrid()
