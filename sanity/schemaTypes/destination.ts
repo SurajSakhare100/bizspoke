@@ -30,15 +30,11 @@ export default defineType({
           type: 'image',
           options: {
             hotspot: true,
+            // Accept all image formats
+            accept: 'image/*',
+            // Additional formats support
+            storeOriginalFilename: true,
           },
-          fields: [
-            {
-              name: 'alt',
-              type: 'string',
-              title: 'Alternative Text',
-              description: 'Important for SEO and accessibility.',
-            },
-          ],
         },
       ],
       validation: (Rule) => Rule.required().min(1).max(10),

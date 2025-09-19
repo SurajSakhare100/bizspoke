@@ -25,4 +25,18 @@ export default defineConfig({
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({defaultApiVersion: apiVersion}),
   ],
+  // Add media handling configuration
+  media: {
+    // Enable image handling
+    images: {
+      // Configure image upload options - allow all image types
+      accept: 'image/*',
+      maximumUploadSize: 30000000, // 30MB limit
+    },
+  },
+  // Additional configuration for file uploads
+  file: {
+    // Allow various file types including images
+    accept: 'image/*, .webp, .avif, .heic, .heif, .bmp, .tiff, .tif, .svg, .ico',
+  },
 })
