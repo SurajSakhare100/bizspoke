@@ -53,7 +53,7 @@ export default async function ExperiencesPage() {
             title="Events and Off-sites"
             baseUrl="/experiences/eventsOffsites"
             showViewMore={events.length > 5}
-            viewMoreUrl="/experiences/eventsOffsites"
+            viewMoreUrl="/experiences/events"
           />
         )}
 
