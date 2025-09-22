@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Image from 'next/image'
-import { CoverPage as CoverPageType } from '../../sanity/lib/OurExpertise'
+import { OurExpertise as CoverPageType } from '../../sanity/lib/OurExpertise'
 import { urlForImage } from '../../sanity/lib/image'
 import { ErrorFallback } from './ErrorFallback'
 
