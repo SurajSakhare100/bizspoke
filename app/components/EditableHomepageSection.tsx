@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { PortableText } from '@portabletext/react'
 import { HomepageContent } from '../../sanity/lib/homepageContent'
 import { urlForImage } from '../../sanity/lib/image'
-import { ErrorFallback, EmptyStateFallback } from './ErrorFallback'
+import { EmptyStateFallback } from './ErrorFallback'
 
 interface EditableHomepageSectionProps {
   content?: HomepageContent | null
@@ -21,13 +21,13 @@ interface EditableHomepageSectionProps {
 
 const portableTextComponents = {
   block: {
-    normal: ({ children }: any) => <p className="mb-4 text-gray-700 leading-relaxed">{children}</p>,
-    h1: ({ children }: any) => <h1 className="text-4xl font-bold mb-6 text-gray-900 font-canela-trial">{children}</h1>,
-    h2: ({ children }: any) => <h2 className="text-3xl font-bold mb-4 text-gray-900 font-canela-trial">{children}</h2>,
-    h3: ({ children }: any) => <h3 className="text-2xl font-bold mb-3 text-gray-900 font-dm-sans">{children}</h3>,
+    normal: ({ children }: { children: React.ReactNode }) => <p className="mb-4 text-gray-700 leading-relaxed">{children}</p>,
+    h1: ({ children }: { children: React.ReactNode }) => <h1 className="text-4xl font-bold mb-6 text-gray-900 font-canela-trial">{children}</h1>,
+    h2: ({ children }: { children: React.ReactNode }) => <h2 className="text-3xl font-bold mb-4 text-gray-900 font-canela-trial">{children}</h2>,
+    h3: ({ children }: { children: React.ReactNode }) => <h3 className="text-2xl font-bold mb-3 text-gray-900 font-dm-sans">{children}</h3>,
   },
   types: {
-    image: ({ value }: any) => {
+    image: ({ value }: { value: any }) => {
       const imageUrl = urlForImage(value)?.url()
       return imageUrl ? (
         <div className="my-8">
@@ -89,14 +89,7 @@ export default function EditableHomepageSection({
           </p>
         )}
 
-        {richContent && richContent.length > 0 && (
-          <div className="max-w-4xl mx-auto mb-8">
-            <PortableText 
-              value={richContent} 
-              components={portableTextComponents}
-            />
-          </div>
-        )}
+        
 
         {images && images.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">

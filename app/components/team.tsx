@@ -2,9 +2,9 @@
 
 import React from 'react'
 import Image from 'next/image'
-import { getTeamMembers, type TeamMember } from '../../sanity/lib/team'
+import { type TeamMember } from '../../sanity/lib/team'
 import { urlForImage } from '../../sanity/lib/image'
-import { ErrorFallback, EmptyStateFallback } from './ErrorFallback'
+import { EmptyStateFallback } from './ErrorFallback'
 
 interface TeamProps {
   teamMembers?: TeamMember[]

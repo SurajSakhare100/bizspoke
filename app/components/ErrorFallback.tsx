@@ -35,7 +35,7 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({
           {message}
         </h3>
         <p className="text-gray-600 mb-4">
-          We're having trouble loading this content right now.
+          We&apos;re having trouble loading this content right now.
         </p>
         {children}
       </div>

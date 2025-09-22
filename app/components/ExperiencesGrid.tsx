@@ -120,7 +120,7 @@ export default async function ExperiencesGrid() {
       </div>
 
       {/* Experience Sections */}
-      {experienceSections.map((section, sectionIndex) => (
+      {experienceSections.map((section) => (
         section.experiences.length > 0 && (
           <div key={section.type} className="space-y-8">
             {/* Section Header */}
