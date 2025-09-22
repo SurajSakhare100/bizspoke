@@ -33,7 +33,8 @@ export default async function MicePage({ params }: MicePageProps) {
               images={Mice.images}
               imageName={Mice.name}
               // autoPlay={true}
-              autoPlayInterval={5000}
+              
+              autoPlayInterval={2000}
             />
           </div>
           

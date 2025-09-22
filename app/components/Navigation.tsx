@@ -36,8 +36,8 @@ export default function Navigation() {
 
           {/* Right Navigation Links */}
           <div className="flex items-center space-x-4 lg:space-x-6">
-            <Link href="/#services" className="text-[#163B52] hover:text-blue-100 px-3 py-2 text-sm lg:text-base font-medium transition-colors touch-target">
-              Services
+            <Link href="/team" className="text-[#163B52] hover:text-blue-100 px-3 py-2 text-sm lg:text-base font-medium transition-colors touch-target">
+              Team
             </Link>
             <Link href="/contact" className="text-[#163B52] hover:text-blue-100 px-3 py-2 text-sm lg:text-base font-medium transition-colors touch-target">
               Contact
@@ -97,11 +97,11 @@ export default function Navigation() {
                 About Us
               </Link>
               <Link 
-                href="/#services" 
+                href="/team" 
                 className="text-[#163B52] hover:text-blue-100 block px-3 py-3 text-base font-medium transition-colors touch-target"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Services
+                Team
               </Link>
               <Link 
                 href="/contact" 

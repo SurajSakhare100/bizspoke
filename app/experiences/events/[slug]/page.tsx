@@ -33,7 +33,8 @@ export default async function EventsOffsitesPage({ params }: EventsOffsitesPageP
               images={EventsOffsites.images}
               imageName={EventsOffsites.name}
               // autoPlay={true}
-              autoPlayInterval={5000}
+              
+              autoPlayInterval={2000}
             />
           </div>
           

@@ -47,7 +47,7 @@ export default function Footer() {
               Services
             </Link>
           </div>
-          <div className="hidden sm:block w-0 h-24 origin-top-left -rotate-90 outline outline-1 outline-offset-[-0.50px] outline-slate-300"></div>
+          {/* <div className="hidden sm:block w-0 h-24 origin-top-left -rotate-90 outline outline-1 outline-offset-[-0.50px] outline-slate-300"></div> */}
           {/* <div className="block sm:hidden self-stretch h-0 outline outline-1 outline-offset-[-0.50px] outline-slate-300"></div> */}
           {/* Company Info */}
           <div className="space-y-3  border-none border-slate-300 border-b-1 md:border-b-0 md:border-r pr-2 mb-4 md:mb-0">

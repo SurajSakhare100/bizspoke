@@ -33,7 +33,7 @@ export default async function CelebrationsPage({ params }: CelebrationsPageProps
               images={Celebrations.images}
               imageName={Celebrations.name}
               // autoPlay={true}
-              autoPlayInterval={5000}
+              autoPlayInterval={2000}
             />
           </div>
           
