@@ -23,7 +23,6 @@ export interface Mice {
   }
   images: MiceImage[]
   description: string
-  subDescription: string
   featured: boolean
   order: number
 }
@@ -36,7 +35,6 @@ export interface MiceForGrid {
   }
   image: MiceImage
   description: string
-  subDescription: string
 }
 
 // Get all MICE events

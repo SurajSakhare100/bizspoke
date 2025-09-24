@@ -42,9 +42,7 @@ export default async function CelebrationsPage({ params }: CelebrationsPageProps
             <p className="text-lg sm:text-xl text-gray-700 mb-4 sm:mb-6 leading-relaxed font-dm-sans font-medium text-balance">
               {Celebrations.description}
             </p>
-            <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed font-dm-sans text-balance">
-              {Celebrations.subDescription}
-            </p>
+           
           </div>
         </div>
       </section>

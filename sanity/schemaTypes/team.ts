@@ -12,8 +12,14 @@ export default defineType({
       validation: (Rule) => Rule.required()
     }),
     defineField({
+      name: 'position',
+      title: 'Position/Title',
+      type: 'string',
+      validation: (Rule) => Rule.required()
+    }),
+    defineField({
       name: 'image',
-      title: 'Image',
+      title: 'Profile Image',
       type: 'image',
       options: {
         hotspot: true,
@@ -30,6 +36,7 @@ export default defineType({
   preview: {
     select: {
       title: 'name',
+      subtitle: 'position',
       media: 'image'
     }
   }

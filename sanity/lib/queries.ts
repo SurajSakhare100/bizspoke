@@ -16,7 +16,6 @@ const baseExperienceQuery = `
     alt
   },
   description,
-  subDescription,
   featured,
   order
 `
@@ -35,8 +34,7 @@ const baseExperienceGridQuery = `
     },
     alt
   },
-  description,
-  subDescription
+  description
 `
 
 export const destinationQueries = {
@@ -57,7 +55,6 @@ export const destinationQueries = {
         alt
       },
       description,
-      subDescription,
       featured,
       order
     }
@@ -80,7 +77,6 @@ export const destinationQueries = {
         alt
       },
       description,
-      subDescription,
       featured,
       order
     }
@@ -103,7 +99,6 @@ export const destinationQueries = {
         alt
       },
       description,
-      subDescription,
       featured,
       order
     }

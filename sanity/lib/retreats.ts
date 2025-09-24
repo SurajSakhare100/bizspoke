@@ -23,7 +23,6 @@ export interface RetreatsImage {
   }
   images: RetreatsImage[]
   description: string
-  subDescription: string
   featured: boolean
   order: number
 }
@@ -36,7 +35,6 @@ export interface RetreatsForGrid {
   }
   image: RetreatsImage
   description: string
-  subDescription: string
 }
 
 // Get all luxury retreats

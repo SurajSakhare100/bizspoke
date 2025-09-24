@@ -16,7 +16,6 @@ interface Experience {
     alt?: string
   }
   description: string
-  subDescription: string
 }
 
 interface ExperienceSection {

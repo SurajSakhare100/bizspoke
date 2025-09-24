@@ -23,7 +23,6 @@ export interface EventsOffsites {
   }
   images: EventsOffsitesImage[]
   description: string
-  subDescription: string
   featured: boolean
   order: number
 }
@@ -36,7 +35,6 @@ export interface EventsOffsitesForGrid {
   }
   image: EventsOffsitesImage
   description: string
-  subDescription: string
 }
 
 // Get all events and off-sites

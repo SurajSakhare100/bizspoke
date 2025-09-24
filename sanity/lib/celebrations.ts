@@ -23,7 +23,6 @@ export interface Celebrations {
   }
   images: CelebrationsImage[]
   description: string
-  subDescription: string
   featured: boolean
   order: number
 }
@@ -36,7 +35,6 @@ export interface CelebrationsForGrid {
   }
   image: CelebrationsImage
   description: string
-  subDescription: string
 }
 
 // Get all celebrations

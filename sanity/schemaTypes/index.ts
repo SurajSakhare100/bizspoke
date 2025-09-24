@@ -4,9 +4,9 @@ import eventsOffsites from './eventsOffsites'
 import mice from './mice'
 import celebrations from './celebrations'
 import team from './team'
+import teamSettings from './teamSettings'
 import ourExpertise from './ourExpertise'
 import heroSection from './heroSection'
-import homepageContent from './homepageContent'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -15,8 +15,8 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     mice,
     celebrations,
     team,
+    teamSettings,
     ourExpertise,
     heroSection,
-    homepageContent,
   ],
 }

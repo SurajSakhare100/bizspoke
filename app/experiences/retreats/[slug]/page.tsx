@@ -42,16 +42,14 @@ export default async function RetreatsPage({ params }: RetreatsPageProps) {
             <p className="text-lg sm:text-xl text-gray-700 mb-4 sm:mb-6 leading-relaxed font-dm-sans font-medium text-balance">
               {Retreats.description}
             </p>
-            <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed font-dm-sans text-balance">
-              {Retreats.subDescription}
-            </p>
+           
           </div>
         </div>
       </section>
 
 
         {/* Reach Out Section */}
-        <ReachOut />
+        <ReachOut />yes
       </div>
     </main>
   )

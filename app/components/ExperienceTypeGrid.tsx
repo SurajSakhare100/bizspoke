@@ -23,7 +23,6 @@ interface Experience {
   }
   image: ExperienceImage
   description: string
-  subDescription: string
 }
 
 interface ExperienceTypeGridProps {

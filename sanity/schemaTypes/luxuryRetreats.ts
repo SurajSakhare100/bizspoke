@@ -43,12 +43,6 @@ export default defineType({
       validation: (Rule) => Rule.required().max(500),
     }),
     defineField({
-      name: 'subDescription',
-      title: 'Sub Description',
-      type: 'text',
-      validation: (Rule) => Rule.required().max(500),
-    }),
-    defineField({
       name: 'category',
       title: 'Category',
       type: 'string',

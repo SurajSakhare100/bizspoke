@@ -43,8 +43,8 @@ export default function Footer() {
             <Link href="/team" className="block text-blue-100 text-base sm:text-lg font-medium font-dm-sans uppercase tracking-wide hover:opacity-80 transition-opacity touch-target">
               Team
             </Link>
-            <Link href="/#services" className="block text-blue-100 text-base sm:text-lg font-medium font-dm-sans uppercase tracking-wide hover:opacity-80 transition-opacity touch-target">
-              Services
+            <Link href="/contact" className="block text-blue-100 text-base sm:text-lg font-medium font-dm-sans uppercase tracking-wide hover:opacity-80 transition-opacity touch-target">
+              Contact us
             </Link>
           </div>
           {/* <div className="hidden sm:block w-0 h-24 origin-top-left -rotate-90 outline outline-1 outline-offset-[-0.50px] outline-slate-300"></div> */}

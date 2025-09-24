@@ -43,9 +43,7 @@ export default async function MicePage({ params }: MicePageProps) {
             <p className="text-lg sm:text-xl text-gray-700 mb-4 sm:mb-6 leading-relaxed font-dm-sans font-medium text-balance">
               {Mice.description}
             </p>
-            <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed font-dm-sans text-balance">
-              {Mice.subDescription}
-            </p>
+         
           </div>
         </div>
       </section>

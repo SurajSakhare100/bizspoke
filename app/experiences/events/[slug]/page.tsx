@@ -43,9 +43,7 @@ export default async function EventsOffsitesPage({ params }: EventsOffsitesPageP
             <p className="text-lg sm:text-xl text-gray-700 mb-4 sm:mb-6 leading-relaxed font-dm-sans font-medium text-balance">
               {EventsOffsites.description}
             </p>
-            <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed font-dm-sans text-balance">
-              {EventsOffsites.subDescription}
-            </p>
+           
           </div>
         </div>
       </section>
