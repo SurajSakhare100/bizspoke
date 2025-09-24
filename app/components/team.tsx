@@ -63,12 +63,12 @@ function Team({ teamMembers, teamSettings }: TeamProps) {
               The Bizspoke Team
             </h2>
             <p className="max-w-4xl mx-auto mt-4 sm:mt-6 text-center text-blue-100 text-base sm:text-lg md:text-xl font-normal font-dm-sans leading-relaxed text-balance">
-              {settings?.teamDescription || "Meet our team - we're the behind-the-scenes experience designers trusted by top-tier companies to run their events calendar like clockwork."}
+              {settings?.teamDescription || "Meet our team - we&apos;re the behind-the-scenes experience designers trusted by top-tier companies to run their events calendar like clockwork."}
             </p>
           </div>
           <EmptyStateFallback
             title="Team Members Coming Soon"
-            message="We're updating our team section. Please check back soon!"
+            message="We&apos;re updating our team section. Please check back soon!"
             className="bg-[#DDE7ED] rounded-lg"
           />
         </div>
@@ -87,7 +87,7 @@ function Team({ teamMembers, teamSettings }: TeamProps) {
             The Bizspoke Team
           </h2>
           <p className="max-w-4xl mx-auto mt-4 sm:mt-6 text-center text-blue-100 text-base sm:text-lg md:text-xl font-normal font-dm-sans leading-relaxed text-balance">
-            {settings?.teamDescription || "Meet our team - we're the behind-the-scenes experience designers trusted by top-tier companies to run their events calendar like clockwork."}
+            {settings?.teamDescription || "Meet our team - we&apos;re the behind-the-scenes experience designers trusted by top-tier companies to run their events calendar like clockwork."}
           </p>
           {/* Group Photo Section */}
           {settings?.groupPhoto && (
@@ -111,7 +111,7 @@ function Team({ teamMembers, teamSettings }: TeamProps) {
             Our Team
           </h2>
           <p className="text-blue-100 text-sm md:text-base  lg:text-xl  font-dm-sans">
-            The people behind Bizspoke's success
+            The people behind Bizspoke&apos;s success
           </p>
         </div>
 
