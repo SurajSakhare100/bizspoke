@@ -49,7 +49,8 @@ export default async function RetreatsPage({ params }: RetreatsPageProps) {
 
 
         {/* Reach Out Section */}
-        <ReachOut />yes
+        <ReachOut />
+        
       </div>
     </main>
   )
